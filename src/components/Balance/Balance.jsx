@@ -2,11 +2,14 @@ import React from "react";
 import { useGlobalContext } from "../../context";
 
 export const Balance = () => {
-  const { total } = useGlobalContext();
+  const { transactions } = useGlobalContext();
+
+  const amounts = transactions?.map((i) => i?.amount);
+  const total = amounts?.reduce((acc, item) => (acc += item), 0);
   return (
     <>
-      <h1>Balance</h1>
-      <h2>{`Total: ${total}`}</h2>
+      <h3>Your Balance</h3>
+      <h1>${total}</h1>
     </>
   );
 };
