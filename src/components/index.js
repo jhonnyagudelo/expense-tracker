@@ -1,4 +1,5 @@
 export * from './Balance';
+export * from './ExpenseChart';
 export * from './Header';
 export * from './IncomeExpenses';
 export * from './TransactionForm/component/TransactionItem';

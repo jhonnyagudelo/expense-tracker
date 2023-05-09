@@ -8,8 +8,8 @@ export const Balance = () => {
   const total = amounts?.reduce((acc, item) => (acc += item), 0);
   return (
     <>
-      <h3>Your Balance</h3>
-      <h1>${total}</h1>
+      <h3 className="flex justify-between">Your Balance</h3>
+      <h1 className="text-2x1 font-bold">${total}</h1>
     </>
   );
 };
